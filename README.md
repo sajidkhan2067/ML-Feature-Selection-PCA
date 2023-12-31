@@ -1,6 +1,9 @@
 # PCA (Principal Component Analysis)
 PCA is a dimensionality reduction technique commonly used in machine learning and data analysis. While PCA is primarily used for dimensionality reduction, it can also be employed for feature selection, albeit indirectly. 
-To cross-check the most important features for DoS/DDoS attacks, Principal Component Analysis (PCA) is calculated for VM-Based dataset (https://ieee-dataport.org/documents/dosddos-attack-dataset-5g-network-slicing). The top 10 features are printed based on the variance in below table. PCA was calculated using ’sklearn’ library of Python.
+Steps:
+1. Wireshark is used to create a .pcap file from network traffic. Then this [dataset](https://ieee-dataport.org/documents/dosddos-attack-dataset-5g-network-slicing) is created.
+2. CICIFlowMeter converts 84 features from a .pcap file to a .csv file.
+3. PCA calculates the top 10 features based on the variance shown in the table below. PCA was calculated using the’sklearn’ library of Python.
 
 | Serial | Features            | Variance (%) |
 |--------|---------------------|--------------|
